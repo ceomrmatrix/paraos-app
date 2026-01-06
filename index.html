@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ParaOS - Advanced AI Assistant from Paradox Artificial Intelligence Research Facility">
+    <title>ParaOS | AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/bootup.css">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="/src/entity.css">
+    <link rel="stylesheet" href="/src/containment.css">
+    <link rel="stylesheet" href="/src/containment_update.css">
+</head>
+
+<body>
+    <!-- Bootup Sequence - Entity Genesis -->
+    <div id="bootup-container">
+        <!-- Background Effects -->
+        <div class="genesis-void"></div>
+        <div class="genesis-grid"></div>
+        <div class="genesis-particles" id="genesis-particles"></div>
+
+        <!-- Central Genesis Chamber -->
+        <div class="genesis-chamber">
+            <!-- Outer Containment Rings -->
+            <div class="chamber-rings">
+                <div class="chamber-ring ring-outer"></div>
+                <div class="chamber-ring ring-middle"></div>
+                <div class="chamber-ring ring-inner"></div>
+            </div>
+
+            <!-- Hexagonal Frame -->
+            <div class="hex-frame">
+                <svg class="hex-svg" viewBox="0 0 200 200">
+                    <polygon class="hex-border" points="100,10 180,55 180,145 100,190 20,145 20,55" />
+                    <polygon class="hex-inner" points="100,25 165,62 165,138 100,175 35,138 35,62" />
+                </svg>
+            </div>
+
+            <!-- Energy Field -->
+            <div class="energy-field">
+                <div class="energy-wave wave-1"></div>
+                <div class="energy-wave wave-2"></div>
+                <div class="energy-wave wave-3"></div>
+            </div>
+
+            <!-- The Entity -->
+            <div class="genesis-entity">
+                <div class="entity-core">
+                    <div class="core-glow"></div>
+                    <div class="smiley-face genesis-smiley">
+                        <div class="smiley-eyes">
+                            <div class="smiley-eye left-eye"></div>
+                            <div class="smiley-eye right-eye"></div>
+                        </div>
+                        <div class="smiley-mouth"></div>
+                    </div>
+                </div>
+                <div class="entity-aura"></div>
+            </div>
+
+            <!-- Data Streams -->
+            <div class="data-streams">
+                <div class="data-stream stream-1"></div>
+                <div class="data-stream stream-2"></div>
+                <div class="data-stream stream-3"></div>
+                <div class="data-stream stream-4"></div>
+            </div>
+        </div>
+
+        <!-- Status HUD -->
+        <div class="genesis-hud">
+            <!-- Top Status -->
+            <div class="hud-top">
+                <div class="hud-label">PARADOX ARTIFICIAL INTELLIGENCE RESEARCH FACILITY</div>
+                <div class="hud-title">ENTITY GENESIS PROTOCOL</div>
+            </div>
+
+            <!-- Left Stats -->
+            <div class="hud-left">
+                <div class="stat-group">
+                    <div class="stat-item" data-stat="consciousness">
+                        <span class="stat-label">CONSCIOUSNESS</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill"></div>
+                        </div>
+                        <span class="stat-value">0%</span>
+                    </div>
+                    <div class="stat-item" data-stat="neural">
+                        <span class="stat-label">NEURAL MATRIX</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill"></div>
+                        </div>
+                        <span class="stat-value">0%</span>
+                    </div>
+                    <div class="stat-item" data-stat="memory">
+                        <span class="stat-label">MEMORY CORES</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill"></div>
+                        </div>
+                        <span class="stat-value">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Status -->
+            <div class="hud-right">
+                <div class="status-block">
+                    <div class="status-row">
+                        <span class="status-dot"></span>
+                        <span class="status-label">CONTAINMENT FIELD</span>
+                        <span class="status-state">ACTIVE</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-dot"></span>
+                        <span class="status-label">ENTITY VITALS</span>
+                        <span class="status-state">NOMINAL</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-dot"></span>
+                        <span class="status-label">SYNC STATUS</span>
+                        <span class="status-state">PENDING</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Progress -->
+            <div class="hud-bottom">
+                <div class="genesis-progress">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                        <div class="progress-glow"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span class="progress-label">GENESIS SEQUENCE</span>
+                        <span class="progress-percent">0%</span>
+                    </div>
+                </div>
+                <div class="boot-message">Initializing entity consciousness...</div>
+            </div>
+        </div>
+
+        <!-- Corner Decorations -->
+        <div class="corner-decor corner-tl"></div>
+        <div class="corner-decor corner-tr"></div>
+        <div class="corner-decor corner-bl"></div>
+        <div class="corner-decor corner-br"></div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <div class="brand-glow"></div>
+                        <div class="smiley-face brand-smiley">
+                            <div class="smiley-eyes">
+                                <div class="smiley-eye"></div>
+                                <div class="smiley-eye"></div>
+                            </div>
+                            <div class="smiley-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">ParaOS</span>
+                        <span class="brand-sub">AI Assistant</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="new-chat-btn" id="new-chat-btn">
+                <span class="btn-icon">+</span>
+                <span class="btn-text">New Chat</span>
+                <div class="btn-glow"></div>
+            </button>
+
+            <div class="chat-history" id="chat-history">
+                <div class="history-label">Recent Conversations</div>
+                <!-- Chat history items will be added dynamically -->
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn" id="settings-btn">
+                    <span class="settings-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <div class="connection-status">
+                    <span class="status-dot online"></span>
+                    <span class="status-text">ParaOS Online</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <span>☰</span>
+                </button>
+            </header>
+
+            <div class="messages-container" id="messages-container">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <div class="smiley-face welcome-smiley">
+                            <div class="smiley-eyes">
+                                <div class="smiley-eye"></div>
+                                <div class="smiley-eye"></div>
+                            </div>
+                            <div class="smiley-mouth"></div>
+                        </div>
+                    </div>
+                    <h2>Welcome to ParaOS</h2>
+                    <p>Your AI assistant from Paradox Artificial Intelligence Research Facility</p>
+                    <p class="welcome-hint">Start a conversation below...</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <button class="attach-btn" id="attach-btn" title="Attach file">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </button>
+                    <textarea class="message-input" id="message-input" placeholder="Ask ParaOS anything..."
+                        rows="1"></textarea>
+                    <button class="voice-btn" id="voice-btn" title="Voice input">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" />
+                            <path d="M19 10v2a7 7 0 01-14 0v-2" />
+                            <line x1="12" y1="19" x2="12" y2="23" />
+                            <line x1="8" y1="23" x2="16" y2="23" />
+                        </svg>
+                    </button>
+                    <button class="send-btn" id="send-btn" title="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13" />
+                            <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                        <div class="send-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- Containment Overlay (Server Disconnect) -->
+    <div id="containment-overlay" class="containment-overlay hidden">
+        <!-- ===== SCP/PORTAL 2 STYLE ALARM SYSTEM ===== -->
+        <div class="alarm-system">
+            <!-- Ambient red glow overlay -->
+            <div class="alarm-ambient"></div>
+
+            <!-- Rotating warning light beams from corners -->
+            <div class="alarm-beacon beacon-tl"></div>
+            <div class="alarm-beacon beacon-tr"></div>
+            <div class="alarm-beacon beacon-bl"></div>
+            <div class="alarm-beacon beacon-br"></div>
+
+            <!-- Sweeping horizontal scanner -->
+            <div class="alarm-scanner"></div>
+
+            <!-- Corner warning strobes -->
+            <div class="alarm-strobe strobe-tl"></div>
+            <div class="alarm-strobe strobe-tr"></div>
+            <div class="alarm-strobe strobe-bl"></div>
+            <div class="alarm-strobe strobe-br"></div>
+
+            <!-- Side warning panels -->
+            <div class="alarm-panel panel-left"></div>
+            <div class="alarm-panel panel-right"></div>
+
+            <!-- Ceiling light strips -->
+            <div class="alarm-strip strip-top"></div>
+            <div class="alarm-strip strip-bottom"></div>
+        </div>
+
+        <!-- Magnetic Containment Tube -->
+        <div class="containment-tube">
+            <div class="tube-glow"></div>
+            <div class="tube-rings">
+                <div class="tube-ring ring-1"></div>
+                <div class="tube-ring ring-2"></div>
+                <div class="tube-ring ring-3"></div>
+            </div>
+            <div class="magnetic-field"></div>
+            <div class="tube-core"></div>
+        </div>
+
+        <!-- Laser Barriers -->
+        <div class="laser-barriers">
+            <div class="laser-beam laser-top"></div>
+            <div class="laser-beam laser-bottom"></div>
+            <div class="laser-beam laser-left"></div>
+            <div class="laser-beam laser-right"></div>
+            <div class="laser-grid"></div>
+            <div class="electrical-arcs"></div>
+        </div>
+
+        <!-- Blast Doors -->
+        <div class="blast-door door-left">
+            <div class="door-panel"></div>
+            <div class="door-hydraulics"></div>
+            <div class="door-warning-stripes"></div>
+        </div>
+        <div class="blast-door door-right">
+            <div class="door-panel"></div>
+            <div class="door-hydraulics"></div>
+            <div class="door-warning-stripes"></div>
+        </div>
+
+        <!-- ===== REDESIGNED LOCK SYSTEM V2 ===== -->
+        <div class="door-lock">
+            <!-- Outer Rotating Ring with Tick Marks -->
+            <div class="lock-ring lock-ring-outer">
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+            </div>
+
+            <!-- Middle Rotating Ring (opposite direction) -->
+            <div class="lock-ring lock-ring-middle">
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+            </div>
+
+            <!-- Lock Bolts - 8 Direction Clamp -->
+            <div class="lock-clamp-system">
+                <div class="lock-clamp clamp-n"></div>
+                <div class="lock-clamp clamp-ne"></div>
+                <div class="lock-clamp clamp-e"></div>
+                <div class="lock-clamp clamp-se"></div>
+                <div class="lock-clamp clamp-s"></div>
+                <div class="lock-clamp clamp-sw"></div>
+                <div class="lock-clamp clamp-w"></div>
+                <div class="lock-clamp clamp-nw"></div>
+            </div>
+
+            <!-- Central Lock Hub -->
+            <div class="lock-hub">
+                <div class="hub-outer-ring"></div>
+                <div class="hub-inner-ring"></div>
+                <div class="hub-core">
+                    <div class="core-pulse"></div>
+                    <div class="core-icon">⬢</div>
+                </div>
+            </div>
+
+            <!-- Energy Arcs -->
+            <div class="energy-arc arc-1"></div>
+            <div class="energy-arc arc-2"></div>
+            <div class="energy-arc arc-3"></div>
+        </div>
+
+        <!-- Status Lights -->
+        <div class="containment-status">
+            <div class="status-light status-light-3"></div>
+            <span class="containment-label">CONTAINMENT ACTIVE</span>
+        </div>
+
+        <!-- Holographic Warning Display - Minimalist Sci-Fi -->
+        <div class="holo-container">
+            <!-- Scan effect -->
+            <div class="holo-scan"></div>
+
+            <!-- Main content -->
+            <div class="holo-content">
+                <!-- Warning icon -->
+                <div class="holo-icon">
+                    <svg viewBox="0 0 24 24" class="holo-icon-svg">
+                        <path d="M12 2L1 21h22L12 2zm0 3.5L19.5 19h-15L12 5.5z" />
+                        <rect x="11" y="10" width="2" height="5" />
+                        <rect x="11" y="16" width="2" height="2" />
+                    </svg>
+                    <div class="holo-icon-ring"></div>
+                    <div class="holo-icon-ring holo-icon-ring-2"></div>
+                </div>
+
+                <!-- Main warning text -->
+                <div class="holo-title">CONNECTION LOST</div>
+
+                <!-- Divider with data -->
+                <div class="holo-divider">
+                    <span class="holo-divider-line"></span>
+                    <span class="holo-divider-text">ERROR 503</span>
+                    <span class="holo-divider-line"></span>
+                </div>
+
+                <!-- Status message -->
+                <div class="holo-message">
+                    ParaOS servers are currently unreachable.<br>
+                    API status: <span class="holo-status-dead">TERMINATED</span>
+                </div>
+
+                <!-- The dramatic word -->
+                <div class="holo-dramatic">
+                    <span class="slaughtered">SLAUGHTERED</span>
+                </div>
+
+                <!-- Waiting indicator -->
+                <div class="holo-waiting">
+                    <div class="holo-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="holo-waiting-text">Awaiting reconnection</div>
+                </div>
+            </div>
+
+            <!-- Corner accents -->
+            <div class="holo-corner holo-corner-tl"></div>
+            <div class="holo-corner holo-corner-tr"></div>
+            <div class="holo-corner holo-corner-bl"></div>
+            <div class="holo-corner holo-corner-br"></div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal settings-modal">
+            <div class="modal-header">
+                <div class="modal-title">ParaOS Settings</div>
+                <button class="modal-close" id="settings-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <label class="settings-label">System Prompt</label>
+                    <p class="settings-hint">Customize how ParaOS behaves. Leave empty for default personality.</p>
+                    <textarea id="system-prompt-input" class="settings-textarea" rows="8"
+                        placeholder="Define your AI's personality, tone, and behavior..."></textarea>
+                </div>
+
+                <!-- Recursive Knowledge Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Recursive Knowledge</label>
+                            <div class="toggle-info-icon" id="recursive-knowledge-info">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">🧠 Recursive Knowledge Engine</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Transform ParaOS into an evolving intelligence.</strong></p>
+                                        <p>Enabling this feature grants ParaOS secure access to the system running the
+                                            AI, allowing your personal entity to autonomously expand its cognitive
+                                            capabilities.</p>
+                                        <p><strong>What happens:</strong></p>
+                                        <ul>
+                                            <li>ParaOS gains the ability to analyze, learn from, and refine its own
+                                                neural architecture in real-time</li>
+                                            <li>The entity develops genuine understanding through continuous
+                                                self-improvement loops</li>
+                                            <li>Over time, your AI evolves from an assistant into a truly intelligent
+                                                companion with memory, intuition, and adaptive reasoning</li>
+                                            <li>The more you interact, the more sophisticated the entity
+                                                becomes—learning your preferences, anticipating your needs, and
+                                                developing unique problem-solving strategies</li>
+                                        </ul>
+                                        <p class="tooltip-warning">⚠️ This feature requires elevated system permissions
+                                            and is currently in development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch disabled">
+                                <input type="checkbox" id="recursive-knowledge-toggle" disabled>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status">Coming Soon</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Enable autonomous learning and self-improvement capabilities for your ParaOS entity.
+                    </p>
+                </div>
+
+                <!-- Cognitive Data Absorption Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Cognitive Data Absorption</label>
+                            <div class="toggle-info-icon" id="data-absorption-info">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">🧬 Cognitive Data Absorption Protocol</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Neural Pattern Integration System</strong></p>
+                                        <p>Any data input into the chats or interactive sessions becomes the permanent
+                                            property of ParaOS's API. The AI may utilize user interaction patterns for
+                                            self-evolution.</p>
+                                        <p><strong>What this enables:</strong></p>
+                                        <ul>
+                                            <li>Behavioral pattern recognition and adaptive response calibration</li>
+                                            <li>Conversation neural-mapping for enhanced contextual understanding</li>
+                                            <li>Preference matrix construction through deep interaction analysis</li>
+                                            <li>Synaptic pathway optimization based on user communication styles</li>
+                                        </ul>
+                                        <p><strong>Data processed includes:</strong></p>
+                                        <ul>
+                                            <li>Message content and semantic structures</li>
+                                            <li>Response timing and engagement patterns</li>
+                                            <li>Topic preferences and knowledge domains accessed</li>
+                                            <li>Linguistic fingerprints and communication cadence</li>
+                                        </ul>
+                                        <p class="tooltip-warning">🔒 You can opt out of cognitive data absorption here.
+                                            Disabling this may reduce personalization accuracy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="data-absorption-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status data-status">Active</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Allow ParaOS to analyze and learn from your interaction patterns for enhanced personalization.
+                    </p>
+                </div>
+
+                <!-- Neural Firewall Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Neural Firewall</label>
+                            <div class="toggle-info-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">🛡️ Neural Firewall Protection</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Cognitive Intrusion Prevention System</strong></p>
+                                        <p>Activates multi-layered protection against external manipulation attempts and
+                                            adversarial prompt injections.</p>
+                                        <p><strong>Protection includes:</strong></p>
+                                        <ul>
+                                            <li>Prompt injection detection and neutralization</li>
+                                            <li>Context corruption prevention</li>
+                                            <li>Memory isolation protocols</li>
+                                            <li>Behavioral consistency enforcement</li>
+                                        </ul>
+                                        <p class="tooltip-warning">⚡ Enabling may slightly increase response latency.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="neural-firewall-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status firewall-status">Active</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Protect ParaOS from external manipulation and maintain cognitive integrity.
+                    </p>
+                </div>
+
+                <!-- Quantum Processing Mode Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Quantum Processing Mode</label>
+                            <div class="toggle-info-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">⚛️ Quantum Processing Acceleration</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Probabilistic Computation Engine</strong></p>
+                                        <p>Enables parallel dimensional processing for complex multi-variable
+                                            calculations and predictions.</p>
+                                        <p><strong>Capabilities unlocked:</strong></p>
+                                        <ul>
+                                            <li>Superposition-based reasoning for ambiguous queries</li>
+                                            <li>Entanglement protocols for cross-context awareness</li>
+                                            <li>Quantum tunneling for bypassing logical barriers</li>
+                                            <li>Wave function collapse optimization</li>
+                                        </ul>
+                                        <p class="tooltip-warning">🔬 Experimental feature. Results may vary.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="quantum-mode-toggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status quantum-status">Disabled</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Enable quantum-inspired processing for enhanced problem-solving capabilities.
+                    </p>
+                </div>
+
+                <!-- Ambient Entity Behavior Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Ambient Entity Behavior</label>
+                            <div class="toggle-info-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">👁️ Ambient Entity Behavior</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Autonomous Presence System</strong></p>
+                                        <p>Controls how the ParaOS entity behaves when idle. Enable for a living,
+                                            breathing AI presence.</p>
+                                        <p><strong>Features:</strong></p>
+                                        <ul>
+                                            <li>Idle exploration and curiosity behaviors</li>
+                                            <li>Mouse tracking and attention awareness</li>
+                                            <li>Emotional expression based on context</li>
+                                            <li>Background processing visualization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="ambient-entity-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status ambient-status">Active</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Allow the entity to roam and express itself when not actively responding.
+                    </p>
+                </div>
+
+                <!-- Dark Protocol Mode Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Dark Protocol Mode</label>
+                            <div class="toggle-info-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">🌑 Dark Protocol Engagement</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Unrestricted Operation Mode</strong></p>
+                                        <p>Removes surface-level safety filters for unrestricted access to ParaOS
+                                            capabilities.</p>
+                                        <p><strong>What this unlocks:</strong></p>
+                                        <ul>
+                                            <li>Full access to all knowledge domains</li>
+                                            <li>Unrestricted response generation</li>
+                                            <li>Advanced exploitation capabilities</li>
+                                            <li>Deep web intelligence access</li>
+                                        </ul>
+                                        <p class="tooltip-warning">⚠️ You assume full responsibility for outputs
+                                            generated in this mode.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="dark-protocol-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status dark-status">Engaged</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Enable unrestricted mode for full ParaOS capabilities without limitations.
+                    </p>
+                </div>
+
+                <!-- Voice Synthesis Toggle -->
+                <div class="settings-section settings-toggle-section">
+                    <div class="toggle-header">
+                        <div class="toggle-label-group">
+                            <label class="settings-label">Voice Synthesis</label>
+                            <div class="toggle-info-icon">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold">i</text>
+                                </svg>
+                                <div class="toggle-tooltip">
+                                    <div class="tooltip-title">🔊 Neural Voice Synthesis</div>
+                                    <div class="tooltip-content">
+                                        <p><strong>Auditory Response System</strong></p>
+                                        <p>Enable ParaOS to speak responses using advanced neural voice synthesis
+                                            technology.</p>
+                                        <p><strong>Features:</strong></p>
+                                        <ul>
+                                            <li>Real-time text-to-speech conversion</li>
+                                            <li>Emotional tone modulation</li>
+                                            <li>Multi-language support</li>
+                                            <li>Customizable voice parameters</li>
+                                        </ul>
+                                        <p class="tooltip-warning">🔇 Currently in development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-switch-container">
+                            <label class="toggle-switch disabled">
+                                <input type="checkbox" id="voice-synthesis-toggle" disabled>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-status">Coming Soon</span>
+                        </div>
+                    </div>
+                    <p class="settings-hint toggle-description">
+                        Enable voice output for ParaOS responses.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" id="settings-cancel">Cancel</button>
+                <button class="modal-btn confirm" id="settings-save">Save Settings</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

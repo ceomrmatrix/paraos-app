@@ -1,0 +1,130 @@
+/* Base theme variables */
+:root {
+  /* Void Theme - Neural Command Center Default */
+  --core-bg: #050014;
+  /* Deep void purple/black */
+  --core-gradient: radial-gradient(circle at 50% 50%, rgba(20, 0, 40, 0.2) 0%, rgba(5, 0, 20, 0.8) 100%);
+
+  --panel-bg: rgba(10, 8, 20, 0.7);
+  --panel-border: rgba(0, 240, 255, 0.15);
+  /* Tech blue border */
+  --panel-glow: rgba(0, 240, 255, 0.05);
+
+  --text-primary: #e0e0ff;
+  --text-secondary: #00f0ff;
+  /* Cyan HUD text */
+  --text-accent: #ff2a6d;
+  /* Red alert accent */
+  --text-muted: #5c5c8a;
+
+  --neon-cyan: #00f0ff;
+  --neon-magenta: #bc13fe;
+  --neon-blue: #3900ff;
+  --neon-green: #0aff60;
+  --neon-red: #ff2a6d;
+
+  --shadow-core: 0 0 100px rgba(0, 240, 255, 0.05);
+  --shadow-panel: 0 0 20px rgba(0, 0, 0, 0.5);
+  --shadow-text: 0 0 5px rgba(0, 240, 255, 0.5);
+
+  --font-hud: 'Rajdhani', sans-serif;
+  --font-data: 'JetBrains Mono', monospace;
+  --font-ui: 'Inter', sans-serif;
+
+  --animation-slow: 4s;
+  --animation-medium: 2s;
+  --animation-fast: 0.15s;
+
+  --border-radius: 2px;
+  /* Angular corners */
+  --clip-angle: polygon(0 0,
+      100% 0,
+      100% calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      0 100%);
+  --transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Neon City Theme */
+[data-theme="neon-city"] {
+  --core-bg: radial-gradient(circle at center, #0a0a0a 0%, #001100 50%, #0a0a00 100%);
+  --panel-bg: rgba(15, 35, 15, 0.85);
+  --panel-border: rgba(0, 255, 0, 0.3);
+  --panel-glow: rgba(0, 255, 0, 0.2);
+
+  --text-primary: #ffffff;
+  --text-secondary: #00ff00;
+  --text-accent: #ffff00;
+  --text-muted: #88ff88;
+
+  --neon-cyan: #00ff00;
+  --neon-magenta: #ffff00;
+  --neon-blue: #00ff88;
+  --neon-green: #88ff00;
+
+  --shadow-core: 0 0 60px rgba(0, 255, 0, 0.3);
+  --shadow-panel: 0 0 30px rgba(0, 255, 0, 0.1);
+}
+
+/* Matrix Theme */
+[data-theme="matrix"] {
+  --core-bg: radial-gradient(circle at center, #000000 0%, #001100 50%, #000000 100%);
+  --panel-bg: rgba(0, 20, 0, 0.9);
+  --panel-border: rgba(0, 255, 0, 0.4);
+  --panel-glow: rgba(0, 255, 0, 0.3);
+
+  --text-primary: #00ff00;
+  --text-secondary: #00ff00;
+  --text-accent: #ffffff;
+  --text-muted: #008800;
+
+  --neon-cyan: #00ff00;
+  --neon-magenta: #00ff00;
+  --neon-blue: #008800;
+  --neon-green: #00ff00;
+
+  --shadow-core: 0 0 60px rgba(0, 255, 0, 0.4);
+  --shadow-panel: 0 0 30px rgba(0, 255, 0, 0.2);
+}
+
+/* Futuristic Dark Theme */
+[data-theme="futuristic-dark"] {
+  --core-bg: radial-gradient(circle at center, #000011 0%, #000033 50%, #000011 100%);
+  --panel-bg: rgba(10, 10, 40, 0.9);
+  --panel-border: rgba(0, 136, 255, 0.4);
+  --panel-glow: rgba(0, 136, 255, 0.3);
+
+  --text-primary: #ffffff;
+  --text-secondary: #0088ff;
+  --text-accent: #00ffff;
+  --text-muted: #6666ff;
+
+  --neon-cyan: #0088ff;
+  --neon-magenta: #00ffff;
+  --neon-blue: #0044ff;
+  --neon-green: #00ff88;
+
+  --shadow-core: 0 0 60px rgba(0, 136, 255, 0.4);
+  --shadow-panel: 0 0 30px rgba(0, 136, 255, 0.2);
+}
+
+/* Aurora Theme */
+[data-theme="aurora"] {
+  --core-bg: radial-gradient(circle at center, #000022 0%, #001122 50%, #000022 100%);
+  --panel-bg: rgba(10, 20, 40, 0.85);
+  --panel-border: rgba(0, 255, 255, 0.3);
+  --panel-glow: rgba(0, 255, 255, 0.2);
+
+  --text-primary: #ffffff;
+  --text-secondary: #00ffff;
+  --text-accent: #0088ff;
+  --text-muted: #6666ff;
+
+  --neon-cyan: #00ffff;
+  --neon-magenta: #0088ff;
+  --neon-blue: #0044ff;
+  --neon-green: #00ff88;
+
+  --shadow-core: 0 0 60px rgba(0, 255, 255, 0.3);
+  --shadow-panel: 0 0 30px rgba(0, 255, 255, 0.1);
+}

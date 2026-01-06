@@ -1,0 +1,113 @@
+/* Base resets and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.4);
+  border-radius: 3px;
+}
+
+/* Boot sequence */
+.boot-sequence {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  color: #0ff;
+}
+
+.boot-container {
+  width: 600px;
+  max-width: 90%;
+}
+
+.boot-logo {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 8px;
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.boot-console {
+  background: rgba(0, 10, 5, 0.9);
+  border: 1px solid #0f0;
+  padding: 24px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.boot-line {
+  margin-bottom: 6px;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.boot-line.active {
+  opacity: 1;
+  color: #0ff;
+}
+
+.boot-line.complete {
+  opacity: 0.8;
+  color: #0f0;
+}
+
+.boot-cursor {
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.progress-container {
+  height: 6px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #0f0;
+  margin-top: 16px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #0f0;
+  box-shadow: 0 0 10px #0f0;
+  transition: width 0.1s;
+}

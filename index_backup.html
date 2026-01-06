@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ParaOS - Advanced AI Assistant from Paradox Artificial Intelligence Research Facility">
+    <title>ParaOS | AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/bootup.css">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="/src/entity.css">
+    <link rel="stylesheet" href="/src/containment.css">
+    <link rel="stylesheet" href="/src/containment_update.css">
+</head>
+
+<body>
+    <!-- Bootup Sequence - High-Security Containment Theme -->
+    <div id="bootup-container">
+        <div class="scanlines"></div>
+        <div class="grid-overlay"></div>
+
+        <!-- HUD Frame Corners -->
+        <div class="hud-corner hud-corner-tl"></div>
+        <div class="hud-corner hud-corner-tr"></div>
+        <div class="hud-corner hud-corner-bl"></div>
+        <div class="hud-corner hud-corner-br"></div>
+
+        <!-- Side Data Streams -->
+        <div class="data-stream data-stream-left">
+            <div class="stream-content"></div>
+        </div>
+        <div class="data-stream data-stream-right">
+            <div class="stream-content"></div>
+        </div>
+
+        <!-- Top Status Bar -->
+        <div class="boot-status-bar">
+            <div class="status-item">
+                <span class="status-label">FACILITY</span>
+                <span class="status-value blink">PARA-7</span>
+            </div>
+            <div class="status-item threat-display">
+                <span class="status-label">THREAT LEVEL</span>
+                <div class="threat-meter">
+                    <div class="threat-bar"></div>
+                    <span class="threat-level">OMEGA</span>
+                </div>
+            </div>
+            <div class="status-item">
+                <span class="status-label">CLEARANCE</span>
+                <span class="status-value">LEVEL-5</span>
+            </div>
+        </div>
+
+        <div class="bootup-content">
+            <!-- Hexagonal Containment Logo -->
+            <div class="containment-logo">
+                <div class="hex-container">
+                    <div class="hex-ring hex-outer"></div>
+                    <div class="hex-ring hex-middle"></div>
+                    <div class="hex-ring hex-inner"></div>
+                    <div class="hex-core">
+                        <div class="hex-glow"></div>
+                        <div class="smiley-face bootup-smiley">
+                            <div class="smiley-eyes">
+                                <div class="smiley-eye"></div>
+                                <div class="smiley-eye"></div>
+                            </div>
+                            <div class="smiley-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="hex-scan-line"></div>
+                </div>
+                <div class="entity-label">SUBJECT: PARA-001</div>
+            </div>
+
+            <div class="system-init">
+                <div class="init-header">
+                    <div class="header-line"></div>
+                    <span class="init-title">⚠ CONTAINMENT SYSTEM INITIALIZATION ⚠</span>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="checklist">
+                    <div class="checklist-item" data-index="0">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Initializing Quantum Containment Field</span>
+                            <span class="check-code">[QCF-001]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                    <div class="checklist-item" data-index="1">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Calibrating Neural Suppression Array</span>
+                            <span class="check-code">[NSA-042]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                    <div class="checklist-item" data-index="2">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Establishing Encrypted Link</span>
+                            <span class="check-code">[SEC-777]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                    <div class="checklist-item" data-index="3">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Entity Vitals Synchronization</span>
+                            <span class="check-code">[BIO-113]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                    <div class="checklist-item" data-index="4">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Behavioral Prediction Matrix Online</span>
+                            <span class="check-code">[BPM-666]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                    <div class="checklist-item" data-index="5">
+                        <div class="check-indicator">
+                            <div class="check-box"><span class="check-mark">✓</span></div>
+                            <div class="check-pulse"></div>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Engaging Primary Magnetic Locks</span>
+                            <span class="check-code">[LCK-999]</span>
+                        </div>
+                        <span class="check-status">PENDING</span>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-label">SYSTEM INTEGRITY</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="progress-glow"></div>
+                        <div class="progress-segments"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+
+                <div class="boot-message">
+                    <span class="message-prefix">&gt; </span>
+                    <span class="message-text"></span>
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Warning Banners -->
+        <div class="warning-banner warning-top">
+            ⚠ AUTHORIZED PERSONNEL ONLY ⚠ LEVEL 5 CLEARANCE REQUIRED ⚠ LETHAL COUNTERMEASURES ACTIVE ⚠
+        </div>
+        <div class="warning-banner warning-bottom">
+            ⚠ CONTAINMENT BREACH = IMMEDIATE TERMINATION ⚠ DO NOT RELEASE ENTITY ⚠ PARADOX PROTOCOL ACTIVE ⚠
+        </div>
+
+        <div class="particle-container" id="particles"></div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <div class="brand-glow"></div>
+                        <div class="smiley-face brand-smiley">
+                            <div class="smiley-eyes">
+                                <div class="smiley-eye"></div>
+                                <div class="smiley-eye"></div>
+                            </div>
+                            <div class="smiley-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">ParaOS</span>
+                        <span class="brand-sub">AI Assistant</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="new-chat-btn" id="new-chat-btn">
+                <span class="btn-icon">+</span>
+                <span class="btn-text">New Chat</span>
+                <div class="btn-glow"></div>
+            </button>
+
+            <div class="chat-history" id="chat-history">
+                <div class="history-label">Recent Conversations</div>
+                <!-- Chat history items will be added dynamically -->
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn" id="settings-btn">
+                    <span class="settings-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <div class="connection-status">
+                    <span class="status-dot online"></span>
+                    <span class="status-text">ParaOS Online</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <span>☰</span>
+                </button>
+            </header>
+
+            <div class="messages-container" id="messages-container">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <div class="smiley-face welcome-smiley">
+                            <div class="smiley-eyes">
+                                <div class="smiley-eye"></div>
+                                <div class="smiley-eye"></div>
+                            </div>
+                            <div class="smiley-mouth"></div>
+                        </div>
+                    </div>
+                    <h2>Welcome to ParaOS</h2>
+                    <p>Your AI assistant from Paradox Artificial Intelligence Research Facility</p>
+                    <p class="welcome-hint">Start a conversation below...</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <button class="attach-btn" id="attach-btn" title="Attach file">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </button>
+                    <textarea class="message-input" id="message-input" placeholder="Ask ParaOS anything..."
+                        rows="1"></textarea>
+                    <button class="voice-btn" id="voice-btn" title="Voice input">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" />
+                            <path d="M19 10v2a7 7 0 01-14 0v-2" />
+                            <line x1="12" y1="19" x2="12" y2="23" />
+                            <line x1="8" y1="23" x2="16" y2="23" />
+                        </svg>
+                    </button>
+                    <button class="send-btn" id="send-btn" title="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13" />
+                            <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                        <div class="send-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- Containment Overlay (Server Disconnect) -->
+    <div id="containment-overlay" class="containment-overlay hidden">
+        <!-- Magnetic Containment Tube -->
+        <div class="containment-tube">
+            <div class="tube-glow"></div>
+            <div class="tube-rings">
+                <div class="tube-ring ring-1"></div>
+                <div class="tube-ring ring-2"></div>
+                <div class="tube-ring ring-3"></div>
+            </div>
+            <div class="magnetic-field"></div>
+            <div class="tube-core"></div>
+        </div>
+
+        <!-- Laser Barriers -->
+        <div class="laser-barriers">
+            <div class="laser-beam laser-top"></div>
+            <div class="laser-beam laser-bottom"></div>
+            <div class="laser-beam laser-left"></div>
+            <div class="laser-beam laser-right"></div>
+            <div class="laser-grid"></div>
+            <div class="electrical-arcs"></div>
+        </div>
+
+        <!-- Blast Doors -->
+        <div class="blast-door door-left">
+            <div class="door-panel"></div>
+            <div class="door-hydraulics"></div>
+            <div class="door-warning-stripes"></div>
+        </div>
+        <div class="blast-door door-right">
+            <div class="door-panel"></div>
+            <div class="door-hydraulics"></div>
+            <div class="door-warning-stripes"></div>
+        </div>
+
+        <!-- ===== REDESIGNED LOCK SYSTEM V2 ===== -->
+        <div class="door-lock">
+            <!-- Outer Rotating Ring with Tick Marks -->
+            <div class="lock-ring lock-ring-outer">
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+                <div class="ring-segment"></div>
+            </div>
+
+            <!-- Middle Rotating Ring (opposite direction) -->
+            <div class="lock-ring lock-ring-middle">
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+                <div class="ring-tick"></div>
+            </div>
+
+            <!-- Lock Bolts - 8 Direction Clamp -->
+            <div class="lock-clamp-system">
+                <div class="lock-clamp clamp-n"></div>
+                <div class="lock-clamp clamp-ne"></div>
+                <div class="lock-clamp clamp-e"></div>
+                <div class="lock-clamp clamp-se"></div>
+                <div class="lock-clamp clamp-s"></div>
+                <div class="lock-clamp clamp-sw"></div>
+                <div class="lock-clamp clamp-w"></div>
+                <div class="lock-clamp clamp-nw"></div>
+            </div>
+
+            <!-- Central Lock Hub -->
+            <div class="lock-hub">
+                <div class="hub-outer-ring"></div>
+                <div class="hub-inner-ring"></div>
+                <div class="hub-core">
+                    <div class="core-pulse"></div>
+                    <div class="core-icon">⬢</div>
+                </div>
+            </div>
+
+            <!-- Energy Arcs -->
+            <div class="energy-arc arc-1"></div>
+            <div class="energy-arc arc-2"></div>
+            <div class="energy-arc arc-3"></div>
+        </div>
+
+        <!-- Status Lights -->
+        <div class="containment-status">
+            <div class="status-light status-light-3"></div>
+            <span class="containment-label">CONTAINMENT ACTIVE</span>
+        </div>
+
+        <!-- Holographic Message Display -->
+        <div class="holo-container">
+            <div class="holo-scanlines"></div>
+            <div class="holo-glitch-layer"></div>
+            <div class="holo-content">
+                <div class="holo-header">/// SYSTEM CRITICAL ///</div>
+                <div class="holo-body">
+                    ParaOS servers are currently offline.<br>
+                    Connection to the API has been <span class="slaughtered">SLAUGHTERED</span>.<br><br>
+                    Please be patient while ParaOS is down for updates, and more.
+                </div>
+                <div class="holo-footer">ERR_CODE: 503_SERVICE_UNAVAILABLE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal settings-modal">
+            <div class="modal-header">
+                <div class="modal-title">ParaOS Settings</div>
+                <button class="modal-close" id="settings-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <label class="settings-label">System Prompt</label>
+                    <p class="settings-hint">Define the AI's personality and behavior. This will be sent with every
+                        message.</p>
+                    <textarea id="system-prompt-input" class="settings-textarea" rows="8"
+                        placeholder="You are ParaOS, an advanced AI assistant..."></textarea>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" id="settings-cancel">Cancel</button>
+                <button class="modal-btn confirm" id="settings-save">Save Settings</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
