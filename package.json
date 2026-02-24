@@ -1,0 +1,94 @@
+{
+  "name": "paraos-app",
+  "private": true,
+  "version": "1.0.14",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "desktop": "electron .",
+    "dist:win": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "concurrently": "^9.2.1",
+    "electron": "^40.6.0",
+    "electron-builder": "^26.8.1",
+    "png-to-ico": "^3.0.1",
+    "typescript": "^5.9.3",
+    "wait-on": "^9.0.4"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@inquirer/prompts": "^8.2.1",
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "autoprefixer": "^10.4.23",
+    "axios": "^1.13.2",
+    "chalk": "^5.6.2",
+    "cli-highlight": "^2.1.11",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.22.0",
+    "ora": "^9.3.0",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.1.18",
+    "uuid": "^13.0.0",
+    "electron-updater": "^6.8.3",
+    "vite": "^5.4.0",
+    "@vitejs/plugin-react": "^5.1.2"
+  },
+  "build": {
+    "appId": "com.paraos.app",
+    "productName": "ParaOS App",
+    "asar": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "dist/**/*",
+      "src/**/*",
+      "public/**/*",
+      "data/**/*",
+      "paraos app icon.png",
+      "paraos app icon.ico",
+      "package.json",
+      "node_modules/**/*",
+      "!node_modules/.cache/**",
+      "!**/.env",
+      "!**/.env.*",
+      "!**/*.pem",
+      "!**/*.key",
+      "!**/*.p12",
+      "!**/*.pfx"
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "icon": "paraos app icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "ceomrmatrix",
+        "repo": "paraos-app",
+        "releaseType": "release"
+      }
+    ]
+  }
+}
